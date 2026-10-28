@@ -1,4 +1,4 @@
-# DurableKV — Persistent Key-Value Storage Engine
+# Persistent Key-Value Storage Engine
 
 **A Redis-Inspired Storage Engine with Disk-Backed Command Queuing, Explicit Execution, and Crash-Recovery Support**
 
@@ -240,50 +240,8 @@ The following tests are recommended for verifying the system.
 | Submit invalid input | The application handles the invalid command appropriately. |
 | Queue a large number of commands | The application can be evaluated for processing time and correctness. |
 
-Record actual test results, screenshots, test inputs, and observed behavior in the repository. Expected results should not be presented as completed test results until they have been verified.
-
-## Performance Evaluation
-
-DurableKV can be evaluated using the following metrics:
-
-- Command submission and logging latency
-- Command execution time
-- Key retrieval latency
-- Throughput for repeated operations
-- Recovery time after an application restart or simulated crash
-- Number of pending commands recovered
-- Performance with increasing numbers of stored keys
-- Command-log size before and after any supported rewrite operation
-
-Each reported measurement should include the test environment, workload, number of operations, measurement method, and actual result. Performance targets should be listed separately from measured values.
-
-## Scope and Limitations
-
-The project focuses on persistent key-value operations, disk-backed command queuing, explicit execution, and recovery of pending commands.
-
-The following capabilities must be evaluated against the actual implementation before they are claimed as guaranteed features:
-
-- Atomic execution of commands
-- Recovery from abrupt power loss
-- Prevention of duplicate execution during recovery
-- Concurrent command processing
-- Background persistence and append-only-log rewriting
-- Advanced indexing and compaction
-- Full compatibility with the Redis server command specification
-
-## Future Enhancements
-
-- Improve execution tracking and recovery validation.
-- Add automated tests for crashes at different execution stages.
-- Strengthen command-log durability and error handling.
-- Add performance benchmarks for large command queues.
-- Improve the data view and execution-status reporting.
-- Optimize storage and command-log management.
-- Expand command compatibility and automated regression testing.
 
 ## Development Documentation
-
-Organize project evidence by development gate according to the college's requirements:
 
 - **Gate 0:** Problem statement, objectives, scope, and feasibility.
 - **Gate 1:** Functional requirements, non-functional requirements, use cases, and acceptance criteria.
@@ -302,10 +260,3 @@ Confirm the required deliverables for each gate using the applicable course guid
 
 These references provide technical context for the Redis-inspired command interface and do not imply that DurableKV uses the official Redis server.
 
-## Contributors
-
-Add the project team members, their responsibilities, and the project guide's name.
-
-## Academic Project
-
-Developed as a college mini project to explore persistent key-value storage, command logging, explicit execution, and crash-recovery concepts.
