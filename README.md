@@ -258,5 +258,4 @@ Confirm the required deliverables for each gate using the applicable course guid
 - [Redis `SET` Command](https://redis.io/docs/latest/commands/set/) — reference for key-value assignment syntax.
 - [Redis Persistence Commands](https://redis.io/docs/latest/commands/) — reference for commands such as `SAVE`, `BGSAVE`, and `BGREWRITEAOF`.
 
-These references provide technical context for the Redis-inspired command interface and do not imply that DurableKV uses the official Redis server.
 
